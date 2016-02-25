@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Google Shelf</title>
+    <link rel="stylesheet" type="text/css" href="GoogleShelfFrontPageCSS.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
 </head>
 <body>
     <p id="select_boxes_labels_para">
@@ -78,38 +80,40 @@
     <p>
         ___________________________________________________________
     </p>
-    <p id="book_search_para">
-        <input title="search_bar" id="search_bar"> <button>Find me some books!</button>
+    <p>
+        <label for="book_results_select_box" id = "book_results_select_box_para">Google Books Searcher</label>
     </p>
+    <p id ="test">
+        Search Bar
+    </p>
+    <p id="book_search_para">
+        <input title="search_bar" id="search_bar"> <button id = get_books_button onclick="add_books_to_list()">Find me some books!</button>
 
+    </p>
     <p id="book_results_label_para">
-        <label for="book_results_select_box" id = "book_results_select_box_para">Google Books Search Results</label>
     </p>
     <p id="book_results_para">
         <select id="book_results_select_box"></select>
-    </p>
-    <p id ="book_info_labels_para">
-        <label for="book_title_input" id="book_title_input_label">Title</label>
-        <label for="book_sub_title_input" id = "book_sub_title_input_label">Sub-Title</label>
-        <label for="book_author_input" id="book_author_input_label">Author</label>
-        <label for="publisher_input" id="publisher_input_label">Publisher</label>
-        <label for="published_date_input" id="published_date_label">Published Date</label>
+
     </p>
     <p id="book_info_para">
-        <input type="text" id="book_title_input" readonly>
-        <input type="text" id="book_sub_title_input" readonly>
-        <input type="text" id="book_author_input" readonly>
-        <input type="text" id="publisher_input" readonly>
-        <input type="text" id="published_date_input" readonly>
+        <input type="text" id="book_title_input" readonly>Book Title<br><br>
+        <input type="text" id="book_sub_title_input" readonly>Sub-Title<br><br>
+        <input type="text" id="book_author_input" readonly>Author<br><br>
+        <input type="text" id="publisher_input" readonly>Publisher<br><br>
+        <input type="text" id="published_date_input" readonly>Published Date
     </p>
     <p id="book_description_labels_para">
-        <label for="book_description_text_area" id="book_description_input_label">Description</label>
+        <label for="book_description_text_area" id="book_description_input">Description</label>
     </p>
     <p id="book_description_para">
-        <textarea id="book_description_text_area" readonly></textarea>
+        <textarea rows="6" cols="75" id="book_description_text_area" readonly></textarea>
     </p>
     <p>
         <button id="put_searched_book_in_to_read_select_box">Add to 'Books to read' list</button>
     </p>
+
+    <script src="GoogleShelfFrontPageJavaScript.js" type="text/javascript"></script>
+    <!--<script src="https://www.googleapis.com/books/v1/volumes?q=quilting"></script>-->
 </body>
 </html>
