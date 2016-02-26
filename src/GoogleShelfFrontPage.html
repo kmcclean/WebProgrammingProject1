@@ -7,20 +7,24 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-    <p id="select_boxes_labels_para">
-        <label for="1_star_select_box" id="1_select_box_star_label">1 Star Reviews</label>
-        <label for="2_star_select_box" id="2_select_box_star_label">2 Star Reviews</label>
-        <label for="3_star_select_box" id="3_select_box_star_label">3 Star Reviews</label>
-        <label for="4_star_select_box" id="4_select_box_star_label">4 Star Reviews</label>
-        <label for="5_star_select_box" id="5_select_box_star_label">5 Star Reviews</label>
-    </p>
-    <p id="select_boxes_para">
-        <select multiple id = "1_star_select_box" size="4"></select>
-        <select multiple id = "2_star_select_box" size="4"></select>
-        <select multiple id = "3_star_select_box" size="4"></select>
-        <select multiple id = "4_star_select_box" size="4"></select>
-        <select multiple id = "5_star_select_box" size="4"></select>
-    </p>
+    <table>
+        <tr>
+            <td><label for="1_star_select_box" id="1_select_box_star_label">1 Star Reviews</label></td>
+            <td><label for="2_star_select_box" id="2_select_box_star_label">2 Star Reviews</label></td>
+            <td><label for="3_star_select_box" id="3_select_box_star_label">3 Star Reviews</label></td>
+            <td><label for="4_star_select_box" id="4_select_box_star_label">4 Star Reviews</label></td>
+            <td><label for="5_star_select_box" id="5_select_box_star_label">5 Star Reviews</label></td>
+        </tr>
+        <tr>
+            <td><select multiple id = "1_star_select_box" size="4">
+                <option>Test</option>
+            </select></td>
+            <td><select multiple id = "2_star_select_box" size="4"></select></td>
+            <td><select multiple id = "3_star_select_box" size="4"></select></td>
+            <td><select multiple id = "4_star_select_box" size="4"></select></td>
+            <td><select multiple id = "5_star_select_box" size="4"></select></td>
+        </tr>
+    </table>
     <p>
         ___________________________________________________________
     </p>
@@ -31,7 +35,7 @@
         <select multiple id = "books_being_read_select_box" size="4"></select>
     </p>
     <p id="books_being_read_buttons_ para">
-        <button id="open">Open Book</button>
+        <button id="go_to_button">Go to this book</button>
         <br>
         <br>
         <button id="add_to_1_star_list">Add to 1 Star List</button>
@@ -51,31 +55,6 @@
     </p>
     <p id="books_to_read_button_para">
         <button id="mark_as_being_read">Mark as being read</button>
-    </p>
-    <p>
-        ___________________________________________________________
-    </p>
-    <p>
-        <select id="set_ranking_select_box" title="set ranking">
-            <option id="1_star_option">1</option>
-            <option id="2_star_option">2</option>
-            <option id="3_star_option">3</option>
-            <option id="4_star_option">4</option>
-            <option id="5_star_option">5</option>
-
-        </select>
-        <button id="find_recommendations">Find Recommendations from this ranking.</button>
-
-    </p>
-    <p id="recommended_books_label_para">
-        <label for="recommended_books_select_box" id = "recommended_books_select_box_label">Recommended Books</label>
-    </p>
-    <p id="recommended_books_para">
-        <select multiple id="recommended_books_select_box" size="4"></select>
-    </p>
-
-    <p id="recommended_books_button_para">
-        <button id="add_recommendation_to_to_read_list">Add to 'Books to read' list</button>
     </p>
     <p>
         ___________________________________________________________
