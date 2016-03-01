@@ -7,30 +7,33 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
 </head>
 <body>
+
+    <!--This section is where all the stuff for books that the user has already read goes.-->
+    <p id ="read_books_para">
     <table>
         <tr>
-            <td><label for="1_star_select_box" id="1_select_box_star_label">1 Star Reviews</label></td>
-            <td><label for="2_star_select_box" id="2_select_box_star_label">2 Star Reviews</label></td>
-            <td><label for="3_star_select_box" id="3_select_box_star_label">3 Star Reviews</label></td>
-            <td><label for="4_star_select_box" id="4_select_box_star_label">4 Star Reviews</label></td>
-            <td><label for="5_star_select_box" id="5_select_box_star_label">5 Star Reviews</label></td>
+            <td class="one_select_box_star_label"><label for="1_star_select_box" id="">1 Star Reviews</label></td>
+            <td class="two_select_box_star_label"><label for="2_star_select_box">2 Star Reviews</label></td>
+            <td class="three_select_box_star_label"><label for="3_star_select_box">3 Star Reviews</label></td>
+            <td class="four_select_box_star_label"><label for="4_star_select_box">4 Star Reviews</label></td>
+            <td class="five_select_box_star_label"><label for="5_star_select_box" >5 Star Reviews</label></td>
         </tr>
         <tr>
-            <td><select multiple id = "1_star_select_box" size="4">
-                <option>Test</option>
-            </select></td>
-            <td><select multiple id = "2_star_select_box" size="4"></select></td>
-            <td><select multiple id = "3_star_select_box" size="4"></select></td>
-            <td><select multiple id = "4_star_select_box" size="4"></select></td>
-            <td><select multiple id = "5_star_select_box" size="4"></select></td>
+            <td id="table_data_one_star"><select multiple id = "1_star_select_box" size="4"></select></td>
+            <td id="table_data_two_star"><select multiple id = "2_star_select_box" size="4"></select></td>
+            <td id="table_data_three_star"><select multiple id = "3_star_select_box" size="4"></select></td>
+            <td id="table_data_four_star"><select multiple id = "4_star_select_box" size="4"></select></td>
+            <td id="table_data_five_star"><select multiple id = "5_star_select_box" size="4"></select></td>
         </tr>
     </table>
+    </p>
     <p>
         ___________________________________________________________
     </p>
-    <p id="books_being_read_label_para">
+
+    <!--This section is for books that are currently being read by the user.-->
+    <p id="books_being_read_section_para">
         <label for="books_being_read_select_box" id="books_being_read_label">Books Being Read</label>
-    </p>
     <p id="books_being_read_para">
         <select multiple id = "books_being_read_select_box" size="4"></select>
     </p>
@@ -44,9 +47,11 @@
         <button id="add_to_4_star_list">Add to 4 Star List</button>
         <button id="add_to_5_star_list">Add to 5 Star List</button>
     </p>
+    </p>
     <p>
         ___________________________________________________________
     </p>
+    <!--This section is where the books that the user is planning to read are placed-->
     <p id="books_to_read_label_para">
         <label for="books_to_read_select_box" id="books_to_read_label">Books to read</label>
     </p>
@@ -59,22 +64,28 @@
     <p>
         ___________________________________________________________
     </p>
+    <!--This is where searching for books happens-->
     <p>
         <label for="book_results_select_box" id = "book_results_select_box_para">Google Books Searcher</label>
     </p>
     <p id ="test">
         Search Bar
     </p>
+
+    <!--The user inputs the book they want to find here and presses the button. The javascript then goes and gets the books for them and returns it here.-->
     <p id="book_search_para">
-        <input title="search_bar" id="search_bar"> <button id = get_books_button onclick="add_books_to_list()">Find me some books!</button>
+        <input title="search_bar" id="search_bar"> <button id = "get_books_button" onclick="add_books_to_list()">Find me some books!</button>
 
     </p>
     <p id="book_results_label_para">
     </p>
+
+    <!--This is where the books that result from the search appear. Whenever a new one is selected, the inputs in the 'book_info_para' are updated. -->
     <p id="book_results_para">
         <select id="book_results_select_box"></select>
-
     </p>
+
+    <!--This shows the data on the book selected. It updates at the book selected is updated.-->
     <p id="book_info_para">
         <input type="text" id="book_title_input" readonly>Book Title<br><br>
         <input type="text" id="book_sub_title_input" readonly>Sub-Title<br><br>
@@ -82,17 +93,21 @@
         <input type="text" id="publisher_input" readonly>Publisher<br><br>
         <input type="text" id="published_date_input" readonly>Published Date
     </p>
+
+
     <p id="book_description_labels_para">
         <label for="book_description_text_area" id="book_description_input">Description</label>
     </p>
+
+    <!--This is to show the description of the book that is given by Google Books.-->
     <p id="book_description_para">
         <textarea rows="6" cols="75" id="book_description_text_area" readonly></textarea>
     </p>
+
     <p>
         <button id="put_searched_book_in_to_read_select_box">Add to 'Books to read' list</button>
     </p>
 
     <script src="GoogleShelfFrontPageJavaScript.js" type="text/javascript"></script>
-    <!--<script src="https://www.googleapis.com/books/v1/volumes?q=quilting"></script>-->
 </body>
 </html>

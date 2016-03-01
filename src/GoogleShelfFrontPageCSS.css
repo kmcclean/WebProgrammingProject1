@@ -1,7 +1,49 @@
-#1_star_select_box option{
+/*These first ten sections set the choice of which of the boxes of books which have been read. They set the color of
+the text above each box as well as the color of the text inside each box.*/
+.one_select_box_star_label{
     color:red;
 }
 
-#5_star_select_box option{
+.two_select_box_star_label{
+    color:indianred;
+}
+
+.three_select_box_star_label{
+    text-decoration: underline;
+}
+
+.four_select_box_star_label{
+    color:goldenrod;
+}
+
+.five_select_box_star_label{
     color:gold;
+}
+
+#table_data_one_star > select{
+    color:red
+}
+
+#table_data_two_star > select {
+    color:indianred;
+}
+
+#table_data_three_star > select {
+    color:white;
+    background-color: black;
+}
+
+#table_data_four_star > select{
+    color:goldenrod;
+}
+#table_data_five_star> select{
+    color:gold;
+}
+
+#books_being_read_section_para{
+    background-color:deepskyblue;
+}
+/*Pads out the area around the a label a bit.*/
+#books_to_read_label_para{
+    padding: 10px;
 }
